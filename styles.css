@@ -133,9 +133,9 @@ td:first-child { font-weight: 600; min-width: 200px; }
   .nav-icon { font-size: 10px; width: auto; }
   .rail-foot { justify-content: center; padding: 14px 0 0; }
   .main { padding: 0 22px 20px; }
-  .deadline-alert { grid-template-columns: 26px 1fr; }
+  .deadline-alert { grid-template-columns: 26px minmax(0, 1fr); }
   .deadline-values { grid-column: 2; border-left: 0; border-top: 1px solid #e8c9bd; padding: 10px 0 0; }
-  .overview-grid { grid-template-columns: 1fr; }
+  .overview-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .shell { display: block; width: 100%; }
@@ -158,6 +158,7 @@ td:first-child { font-weight: 600; min-width: 200px; }
   .deadline-alert { gap: 9px; padding: 12px; }
   .deadline-values { grid-template-columns: minmax(0, 1fr); gap: 8px; min-width: 0; }
   .deadline-values strong { font-size: 11px; overflow-wrap: anywhere; }
+  .section-heading { align-items: flex-start; flex-wrap: wrap; }
   .compact-row { grid-template-columns: 1fr 1fr; }
   .compact-row label, .compact-row .field-note { grid-column: 1 / -1; }
   .entry-meta { grid-template-columns: 1fr 1fr; }
