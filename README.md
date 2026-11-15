@@ -33,3 +33,7 @@ AI coding assistance was used to draft implementation and tests. The running app
 ## Attribution
 
 Implementation: HTML, CSS, JavaScript, browser `Intl` and localStorage APIs. The repository does not grant a license to reuse the code; all rights are reserved unless the author publishes a separate license.
+
+## Live demo
+
+https://xqscora.github.io/bridge-the-gap-rulebridge/
