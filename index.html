@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f6">
+    <title>RuleBridge | Bridge The Gap</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="rail" aria-label="Workspace navigation">
+        <a class="brand" href="#overview" aria-label="RuleBridge home">
+          <span class="brand-mark">RB</span>
+          <span>RuleBridge</span>
+        </a>
+        <div class="rail-label">WORKSPACE</div>
+        <nav class="nav-list" aria-label="Sections">
+          <button class="nav-item active" data-view="overview" type="button"><span class="nav-icon">01</span>Overview</button>
+          <button class="nav-item" data-view="requirements" type="button"><span class="nav-icon">02</span>Requirements</button>
+          <button class="nav-item" data-view="sources" type="button"><span class="nav-icon">03</span>Sources</button>
+        </nav>
+        <div class="rail-foot">
+          <span class="status-dot"></span>
+          <span>Saved on this device</span>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb"><span>Workspace</span><span class="crumb-slash">/</span><strong>Bridge The Gap Hacks</strong></div>
+          <label class="timezone-control" for="timezone">
+            <span>Display time in</span>
+            <select id="timezone" aria-label="Display time in">
+              <option value="Asia/Shanghai">Beijing</option>
+              <option value="America/Los_Angeles">Pacific</option>
+              <option value="America/New_York">Eastern</option>
+              <option value="Europe/London">London</option>
+              <option value="UTC">UTC</option>
+            </select>
+          </label>
+        </header>
+
+        <section class="page-head">
+          <div>
+            <p class="eyebrow">STUDENT BUILD WINDOW · NOV 15—20, 2026</p>
+            <h1>Bridge The Gap Hacks</h1>
+            <p class="subhead">A sourced checklist for turning the rules into a build plan.</p>
+          </div>
+          <div class="phase"><span class="phase-dot"></span><span>Build window open</span></div>
+        </section>
+
+        <section class="deadline-alert" aria-labelledby="deadline-title">
+          <div class="alert-symbol" aria-hidden="true">!</div>
+          <div class="alert-copy">
+            <h2 id="deadline-title">Two official pages show different deadline times</h2>
+            <p>Use the earlier time until the organizer confirms which one controls.</p>
+          </div>
+          <div class="deadline-values">
+            <div><span class="value-label">PLAN FOR</span><strong id="safe-deadline">—</strong><small>11:45 PM Pacific · overview</small></div>
+            <div><span class="value-label">RULES PAGE</span><strong id="rules-deadline">—</strong><small>11:59 PM Pacific · rules</small></div>
+          </div>
+        </section>
+
+        <section class="view active" id="view-overview" aria-labelledby="overview-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">YOUR ENTRY</p><h2 id="overview-title">Submission readiness</h2></div>
+            <div class="heading-actions">
+              <span class="progress-count" id="progress-count">0 / 5 required</span>
+              <button class="text-button export-button" id="export-report" type="button">Export audit packet</button>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <section class="entry-panel" aria-label="Project details">
+              <div class="field-row">
+                <label for="project-name">Working project name</label>
+                <input id="project-name" type="text" maxlength="80" placeholder="Name your project">
+              </div>
+              <div class="field-row compact-row">
+                <label for="start-date">Project started</label>
+                <input id="start-date" type="date" min="2026-11-15" max="2026-11-20">
+                <span class="field-note" id="window-result">Set a date to check the build window.</span>
+              </div>
+              <div class="entry-meta">
+                <div><span class="meta-label">ELIGIBILITY TEXT</span><strong>Overview: ages 13–21 · Rules: high-school or undergraduate</strong></div>
+                <div><span class="meta-label">TEAM SIZE</span><strong>Solo or up to 4</strong></div>
+                <a href="https://sq-hacks.devpost.com/rules" target="_blank" rel="noreferrer">Open official rules <span aria-hidden="true">↗</span></a>
+              </div>
+            </section>
+
+            <section class="check-panel" aria-label="Required deliverables">
+              <div class="check-head"><h3>Required deliverables</h3><button class="text-button" type="button" data-go="requirements">View all</button></div>
+              <ul class="quick-list" id="quick-list"></ul>
+              <div class="recommended-line"><span class="recommend-mark">+</span><span>Demo video, 2–5 min <em>recommended</em></span></div>
+            </section>
+          </div>
+
+          <section class="rule-strip">
+            <div class="rule-strip-label">BUILD RULE</div>
+            <div><strong>The project must be developed during Nov 15–20, 2026.</strong><p>Eligibility is checked against the date you enter above. The date alone cannot prove when work began.</p></div>
+            <a href="https://sq-hacks.devpost.com/rules" target="_blank" rel="noreferrer" aria-label="Read build window rule">↗</a>
+          </section>
+          <p class="disclaimer">This workspace organizes cited public rules; it does not determine eligibility or replace organizer confirmation.</p>
+        </section>
+
+        <section class="view" id="view-requirements" aria-labelledby="requirements-title" hidden>
+          <div class="section-heading">
+            <div><p class="eyebrow">DELIVERABLES</p><h2 id="requirements-title">Requirement checklist</h2></div>
+            <span class="progress-count" id="requirements-progress">0 / 5 required</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Requirement</th><th>Source status</th><th>Type</th><th>Done</th></tr></thead>
+              <tbody id="requirements-table"></tbody>
+            </table>
+          </div>
+          <p class="disclaimer">Checkboxes are private local notes. No information is sent to the organizer.</p>
+        </section>
+
+        <section class="view" id="view-sources" aria-labelledby="sources-title" hidden>
+          <div class="section-heading">
+            <div><p class="eyebrow">EVIDENCE REGISTER</p><h2 id="sources-title">What the sources say</h2></div>
+            <span class="source-count"><span id="conflict-count">0 conflicts</span> · 2 official pages</span>
+          </div>
+          <div class="source-list" id="source-list"></div>
+          <div class="conflict-note">
+            <span class="conflict-icon" aria-hidden="true">!</span>
+            <div class="conflict-copy"><strong>Conflicting claims retained</strong><div class="conflict-list" id="conflict-list"></div><p>This tool does not silently choose which source controls. Confirm eligibility or deadlines with the organizer when they affect a decision.</p></div>
+          </div>
+        </section>
+
+        <footer class="footer"><span>RULEBRIDGE · BRIDGE THE GAP HACKS 2026</span><span>Local-first · no account · no AI</span></footer>
+      </main>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
